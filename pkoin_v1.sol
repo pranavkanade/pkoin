@@ -17,6 +17,7 @@ contract TokenERC20 {
     mapping (address => mapping (address => uint256)) public allowance;
 
     // This generates a public event on the blockchain that will notify clients
+    // This is to notify anyone who is listening to find out if the transfer took place.
     event Transfer(address indexed from, address indexed to, uint256 value);
 
     // This notifies clients about the amount burnt
