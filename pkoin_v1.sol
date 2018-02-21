@@ -18,6 +18,11 @@ contract TokenERC20 {
 
     // This generates a public event on the blockchain that will notify clients
     // This is to notify anyone who is listening to find out if the transfer took place.
+    // Events are special, empty function that you call to help clients like Ethereum Wallet keep 
+    // track of activities happening in the contract. Events should start with a capital letter.
+    // Add this line to begining of the contract to declate the event;
+    // Inside the transfer function this function will be called as follows :
+    // Transfer(msg.sender, _to, _value);
     event Transfer(address indexed from, address indexed to, uint256 value);
 
     // This notifies clients about the amount burnt
